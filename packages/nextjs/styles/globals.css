@@ -157,3 +157,8 @@
 .link:hover {
   opacity: 80%;
 }
+
+/* CeremonyButton hover glow effect */
+.ceremony-button-hover-glow:hover {
+  box-shadow: var(--wampum-glow);
+}
