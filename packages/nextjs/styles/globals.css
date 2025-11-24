@@ -88,6 +88,21 @@
   --tt-bg: var(--color-primary);
 }
 
+
+/* Wampum Custom Wampum Variables for Advanced Effects AKA Shiny Shells and Glowy Beads :3 */
+:root,
+[data-theme="light"] {
+  --wampum-shell-shine: rgba(255, 255, 255, 0.15);
+  --wampum-bead-shadow: 0 4px 12px rgba(91, 75, 138, 0.2);
+  --wampum-glow: 0 0 20px rgba(91, 75, 138, 0.3);
+}
+
+[data-theme="dark"] {
+  --wampum-shell-shine: rgba(255, 255, 255, 0.1);
+  --wampum-bead-shadow: 0 4px 12px rgba(139, 123, 168, 0.3);
+  --wampum-glow: 0 0 20px rgba(139, 123, 168, 0.4);
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
