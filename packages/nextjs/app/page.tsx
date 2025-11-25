@@ -5,7 +5,7 @@ import { Address } from "@scaffold-ui/components";
 import type { NextPage } from "next";
 import { hardhat } from "viem/chains";
 import { useAccount } from "wagmi";
-import { StorySection } from "~~/components/layout";
+import { FeatureCards, StorySection } from "~~/components/layout";
 import { CeremonyButton } from "~~/components/wampum/CeremonyButton";
 import { useTargetNetwork } from "~~/hooks/scaffold-eth";
 
@@ -46,6 +46,8 @@ const Home: NextPage = () => {
       <StorySection />
 
       {/* Feature Cards Section - Will be added when FeatureCards component is ready */}
+      <FeatureCards />
+
       {/* <FeatureCards /> */}
 
       {/* Cultural Note - Will be added when CulturalNote component is ready */}
