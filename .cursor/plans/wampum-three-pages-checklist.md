@@ -188,7 +188,7 @@ Build **Home Page**, **Create Wampum Page**, and **Share Wampum Page** with all 
 - [x] Style with warm, inviting design
 - [x] Make responsive
 - [x] Test dark/light mode
-- [ ] **📍 Git Commit**: `git commit -m "feat: add BeadCustomizer component"`
+- [x] **📍 Git Commit**: `git commit -m "feat: add BeadCustomizer component"`
 
 **Backtrack Point**: If color picker needs adjustment, revert and try different library/approach
 
@@ -198,26 +198,26 @@ Build **Home Page**, **Create Wampum Page**, and **Share Wampum Page** with all 
 **File**: `packages/nextjs/components/forms/RecipientInput.tsx`
 
 **Checklist**:
-- [ ] Install React Hook Form: `yarn add react-hook-form`
-- [ ] Create component file
-- [ ] Add "use client" directive
-- [ ] Implement TypeScript interface (name for React Hook Form, maxRecipients, className)
-- [ ] Use React Hook Form's useFieldArray for dynamic list
-- [ ] Integrate @scaffold-ui/components AddressInput for each address
-- [ ] Add address validation using viem's isAddress
-- [ ] Add ENS resolution support (optional, async)
-- [ ] Add "Add Recipient" button
-- [ ] Add remove button for each address
-- [ ] Enforce maxRecipients limit
-- [ ] Show clear validation errors
-- [ ] **Copy/Language**:
-  - [ ] Label: "Who will receive this Wampum?"
-  - [ ] Helper text: "You'll keep your bead, and they'll receive a copy"
-  - [ ] Error messages: "Invalid address", "Maximum recipients reached"
-- [ ] Style with warm styling
-- [ ] Make responsive
-- [ ] Test dark/light mode
-- [ ] Test validation
+- [x] Install React Hook Form: `yarn add react-hook-form`
+- [x] Create component file
+- [x] Add "use client" directive
+- [x] Implement TypeScript interface (name for React Hook Form, maxRecipients, className)
+- [x] Use React Hook Form's useFieldArray for dynamic list
+- [x] Integrate @scaffold-ui/components AddressInput for each address
+- [x] Add address validation using viem's isAddress
+- [x] Add ENS resolution support (optional, async)
+- [x] Add "Add Recipient" button
+- [x] Add remove button for each address
+- [x] Enforce maxRecipients limit
+- [x] Show clear validation errors
+- [x] **Copy/Language**:
+  - [x] Label: "Who will receive this Wampum?"
+  - [x] Helper text: "You'll keep your bead, and they'll receive a copy"
+  - [x] Error messages: "Invalid address", "Maximum recipients reached"
+- [x] Style with warm styling
+- [x] Make responsive
+- [x] Test dark/light mode
+- [x] Test validation
 - [ ] **📍 Git Commit**: `git commit -m "feat: add RecipientInput component"`
 
 **Backtrack Point**: If validation needs adjustment, revert and refine logic

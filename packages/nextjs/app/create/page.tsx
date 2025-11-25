@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { BeadCustomizer } from "~~/components/forms";
+import { BeadCustomizer, RecipientInput } from "~~/components/forms";
 import { CeremonyButton } from "~~/components/wampum";
 
 /**
@@ -36,6 +36,10 @@ export default function CreateWampumPage() {
 
       <div className="flex justify-center mb-8">
         <BeadCustomizer />
+      </div>
+
+      <div className="flex justify-center mb-8">
+        <RecipientInput name="recipients" />
       </div>
 
       {/* Placeholder Content */}
