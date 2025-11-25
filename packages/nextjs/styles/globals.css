@@ -16,23 +16,35 @@
 @plugin "daisyui/theme" {
   name: "light";
 
-  --color-primary: #93bbfb;
-  --color-primary-content: #212638;
-  --color-secondary: #dae8ff;
-  --color-secondary-content: #212638;
-  --color-accent: #93bbfb;
-  --color-accent-content: #212638;
-  --color-neutral: #212638;
-  --color-neutral-content: #ffffff;
-  --color-base-100: #ffffff;
-  --color-base-200: #f4f8ff;
-  --color-base-300: #dae8ff;
-  --color-base-content: #212638;
-  --color-info: #93bbfb;
-  --color-success: #34eeb6;
-  --color-warning: #ffcf72;
-  --color-error: #ff8863;
+  /* Primary Colors - Shell-inspired */
+  --color-primary: #5b4b8a;
+  --color-primary-content: #f5ede0;
+  --color-secondary: #d4a574;
+  --color-secondary-content: #3d2817;
+  --color-accent: #6b9a8a;
+  --color-accent-content: #f5ede0;
 
+  /* Base Colors - Shell and sand tones */
+  --color-base-100: #fff8f0;
+  --color-base-200: #f5ede0;
+  --color-base-300: #e8ddd0;
+  --color-base-content: #3d2817;
+
+  /* Neutral Colors */
+  --color-neutral: #3d2817;
+  --color-neutral-content: #f5ede0;
+
+  /* Semantic Colors - Nature-inspired */
+  --color-success: #4a7c59;
+  --color-success-content: #f5ede0;
+  --color-warning: #c9a961;
+  --color-warning-content: #3d2817;
+  --color-error: #c97d7d;
+  --color-error-content: #f5ede0;
+  --color-info: #5b8fa8;
+  --color-info-content: #f5ede0;
+
+  /* UI Elements */
   --radius-field: 9999rem;
   --radius-box: 1rem;
   --tt-tailw: 6px;
@@ -41,28 +53,53 @@
 @plugin "daisyui/theme" {
   name: "dark";
 
-  --color-primary: #212638;
-  --color-primary-content: #f9fbff;
-  --color-secondary: #323f61;
-  --color-secondary-content: #f9fbff;
-  --color-accent: #4969a6;
-  --color-accent-content: #f9fbff;
-  --color-neutral: #f9fbff;
-  --color-neutral-content: #385183;
-  --color-base-100: #385183;
-  --color-base-200: #2a3655;
-  --color-base-300: #212638;
-  --color-base-content: #f9fbff;
-  --color-info: #385183;
-  --color-success: #34eeb6;
-  --color-warning: #ffcf72;
-  --color-error: #ff8863;
+  /* Primary Colors - Luminous in dark */
+  --color-primary: #8b7ba8;
+  --color-primary-content: #f5ede0;
+  --color-secondary: #e8b896;
+  --color-secondary-content: #1a2332;
+  --color-accent: #7bb3a3;
+  --color-accent-content: #f5ede0;
 
+  /* Base Colors - Night sky and moonlit sand */
+  --color-base-100: #1a2332;
+  --color-base-200: #2a3441;
+  --color-base-300: #3a4450;
+  --color-base-content: #f5ede0;
+
+  /* Neutral Colors */
+  --color-neutral: #f5ede0;
+  --color-neutral-content: #1a2332;
+
+  /* Semantic Colors - Adjusted for dark */
+  --color-success: #6b9a7a;
+  --color-success-content: #f5ede0;
+  --color-warning: #e8c96b;
+  --color-warning-content: #1a2332;
+  --color-error: #e89b9b;
+  --color-error-content: #f5ede0;
+  --color-info: #7bb3c4;
+  --color-info-content: #f5ede0;
+
+  /* UI Elements */
   --radius-field: 9999rem;
   --radius-box: 1rem;
-
   --tt-tailw: 6px;
   --tt-bg: var(--color-primary);
+}
+
+/* Wampum Custom Wampum Variables for Advanced Effects AKA Shiny Shells and Glowy Beads :3 */
+:root,
+[data-theme="light"] {
+  --wampum-shell-shine: rgba(255, 255, 255, 0.15);
+  --wampum-bead-shadow: 0 4px 12px rgba(91, 75, 138, 0.2);
+  --wampum-glow: 0 0 20px rgba(91, 75, 138, 0.3);
+}
+
+[data-theme="dark"] {
+  --wampum-shell-shine: rgba(255, 255, 255, 0.1);
+  --wampum-bead-shadow: 0 4px 12px rgba(139, 123, 168, 0.3);
+  --wampum-glow: 0 0 20px rgba(139, 123, 168, 0.4);
 }
 
 /*
@@ -118,4 +155,9 @@
 
 .link:hover {
   opacity: 80%;
+}
+
+/* CeremonyButton hover glow effect */
+.ceremony-button-hover-glow:hover {
+  box-shadow: var(--wampum-glow);
 }
