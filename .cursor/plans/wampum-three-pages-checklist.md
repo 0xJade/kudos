@@ -123,21 +123,21 @@ Build **Home Page**, **Create Wampum Page**, and **Share Wampum Page** with all 
 **File**: `packages/nextjs/components/wampum/WampumBeadDisplay.tsx`
 
 **Checklist**:
-- [ ] Create component file
-- [ ] Add "use client" directive
-- [ ] Implement TypeScript interface (tokenId, visualSymbol, size, animated, className)
-- [ ] Add useScaffoldReadContract hook to fetch visualSymbol if not provided
-- [ ] Create circular shape (border-radius: 50%)
-- [ ] Implement shell-like gradient (radial: lighter center to darker edges)
-- [ ] Add shine effect (linear gradient overlay, 45deg, white 10-15% opacity)
-- [ ] Add warm shadow using --wampum-bead-shadow CSS variable
-- [ ] Add optional pulse animation (scale 1.0 to 1.02, 3s duration)
-- [ ] Support custom sizing (diameter prop, default: 200px)
-- [ ] Support both color (hex) and pattern visual symbols
-- [ ] Make responsive
-- [ ] Test dark/light mode
-- [ ] Test with different visualSymbol values
-- [ ] **📍 Git Commit**: `git commit -m "feat: add WampumBeadDisplay component"`
+- [x] Create component file
+- [x] Add "use client" directive
+- [x] Implement TypeScript interface (tokenId, visualSymbol, size, animated, className)
+- [x] Add useScaffoldReadContract hook to fetch visualSymbol if not provided
+- [x] Create circular shape (border-radius: 50%)
+- [x] Implement shell-like gradient (radial: lighter center to darker edges)
+- [x] Add shine effect (linear gradient overlay, 45deg, white 10-15% opacity)
+- [x] Add warm shadow using --wampum-bead-shadow CSS variable
+- [x] Add optional pulse animation (scale 1.0 to 1.02, 3s duration)
+- [x] Support custom sizing (diameter prop, default: 200px)
+- [x] Support both color (hex) and pattern visual symbols
+- [x] Make responsive
+- [x] Test dark/light mode
+- [x] Test with different visualSymbol values
+- [x] **📍 Git Commit**: `git commit -m "feat: add WampumBeadDisplay component"`
 
 **Backtrack Point**: If bead appearance needs adjustment, revert and refine styling
 
@@ -147,18 +147,18 @@ Build **Home Page**, **Create Wampum Page**, and **Share Wampum Page** with all 
 **File**: `packages/nextjs/components/wampum/StoryDisplay.tsx`
 
 **Checklist**:
-- [ ] Create component file
-- [ ] Add "use client" directive
-- [ ] Implement TypeScript interface (story, maxLength, showReadMore, variant, className)
-- [ ] Add state for expanded/collapsed
-- [ ] Implement truncation logic (default: 500 chars)
-- [ ] Add "Read more" / "Read less" button
-- [ ] Implement smooth expand/collapse animation (300ms ease)
-- [ ] Style with warm typography (18px base, 1.7 line height)
-- [ ] Use Wampum text colors (base-content)
-- [ ] Make responsive
-- [ ] Test dark/light mode
-- [ ] Test with short and long stories
+- [x] Create component file
+- [x] Add "use client" directive
+- [x] Implement TypeScript interface (story, maxLength, showReadMore, variant, className)
+- [x] Add state for expanded/collapsed
+- [x] Implement truncation logic (default: 500 chars)
+- [x] Add "Read more" / "Read less" button
+- [x] Implement smooth expand/collapse animation (300ms ease)
+- [x] Style with warm typography (18px base, 1.7 line height)
+- [x] Use Wampum text colors (base-content)
+- [x] Make responsive
+- [x] Test dark/light mode
+- [x] Test with short and long stories
 - [ ] **📍 Git Commit**: `git commit -m "feat: add StoryDisplay component"`
 
 **Backtrack Point**: If read more/less needs adjustment, revert and refine

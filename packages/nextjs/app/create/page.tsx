@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { CeremonyButton, WampumBeadDisplay } from "~~/components/wampum";
+import { CeremonyButton, StoryDisplay, WampumBeadDisplay } from "~~/components/wampum";
 
 /**
  * Create Wampum Page - Placeholder
@@ -35,6 +35,14 @@ export default function CreateWampumPage() {
 
       <div className="flex justify-center mb-8">
         <WampumBeadDisplay tokenId={1} visualSymbol="#D4A574" size={50} className="mb-8" animated={true} />
+      </div>
+
+      <div className="flex justify-center mb-8">
+        <StoryDisplay
+          story="This is a test story that is longer than the set length of 20 characters. It should be truncated and show a 'Read more' button."
+          maxLength={20}
+          showReadMore={true}
+        />
       </div>
 
       {/* Placeholder Content */}
