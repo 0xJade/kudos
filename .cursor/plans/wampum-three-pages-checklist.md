@@ -159,7 +159,7 @@ Build **Home Page**, **Create Wampum Page**, and **Share Wampum Page** with all 
 - [x] Make responsive
 - [x] Test dark/light mode
 - [x] Test with short and long stories
-- [ ] **📍 Git Commit**: `git commit -m "feat: add StoryDisplay component"`
+- [x] **📍 Git Commit**: `git commit -m "feat: add StoryDisplay component"`
 
 **Backtrack Point**: If read more/less needs adjustment, revert and refine
 
@@ -171,23 +171,23 @@ Build **Home Page**, **Create Wampum Page**, and **Share Wampum Page** with all 
 **File**: `packages/nextjs/components/forms/BeadCustomizer.tsx`
 
 **Checklist**:
-- [ ] Install color picker library: `yarn add react-color` (or similar)
-- [ ] Create component file
-- [ ] Add "use client" directive
-- [ ] Implement TypeScript interface (value, onChange, className)
-- [ ] Create Wampum color palette swatches:
-  - [ ] Deep purple-blue: #5B4B8A
-  - [ ] Soft lavender: #8B7BA8
-  - [ ] Warm coral: #D4A574
-  - [ ] Sea green: #6B9A8A
-  - [ ] Forest green: #4A7C59
-  - [ ] Golden amber: #C9A961
-- [ ] Add color picker UI (swatches or full picker)
+- [x] Install color picker library: `yarn add react-color` (or similar)
+- [x] Create component file
+- [x] Add "use client" directive
+- [x] Implement TypeScript interface (value, onChange, className)
+- [x] Create Wampum color palette swatches:
+  - [x] Deep purple-blue: #5B4B8A
+  - [x] Soft lavender: #8B7BA8
+  - [x] Warm coral: #D4A574
+  - [x] Sea green: #6B9A8A
+  - [x] Forest green: #4A7C59
+  - [x] Golden amber: #C9A961
+- [x] Add color picker UI (swatches or full picker)
 - [ ] Add optional pattern selector (stripes, dots, waves) - can be simple CSS patterns
-- [ ] Integrate WampumBeadDisplay for live preview
-- [ ] Style with warm, inviting design
-- [ ] Make responsive
-- [ ] Test dark/light mode
+- [x] Integrate WampumBeadDisplay for live preview
+- [x] Style with warm, inviting design
+- [x] Make responsive
+- [x] Test dark/light mode
 - [ ] **📍 Git Commit**: `git commit -m "feat: add BeadCustomizer component"`
 
 **Backtrack Point**: If color picker needs adjustment, revert and try different library/approach
@@ -389,12 +389,12 @@ Build **Home Page**, **Create Wampum Page**, and **Share Wampum Page** with all 
 - [ ] Remove existing Scaffold-ETH default content (debug/blockexplorer cards still present)
 - [ ] Import WampumHero component (currently using simple hero section)
 - [x] Import StorySection component
-- [ ] Import FeatureCards component
+- [x] Import FeatureCards component
 - [ ] Import CulturalNote component (optional)
 - [ ] **Layout Structure**:
   - [x] Hero section at top (simple version, WampumHero component pending)
   - [x] StorySection below hero (centered, max-width container) ✅ **INTEGRATED**
-  - [ ] FeatureCards in grid (centered, max-width container) - commented placeholder ready
+  - [x] FeatureCards in grid (centered, max-width container) - commented placeholder ready
   - [ ] CulturalNote at bottom (centered, subtle) - commented placeholder ready
 - [x] Add proper spacing between sections (StorySection has py-16, proper flow)
 - [ ] **Copy Verification**:
