@@ -91,13 +91,13 @@ Build **Home Page**, **Create Wampum Page**, and **Share Wampum Page** with all 
 - [x] Add hover effects (subtle scale, glow)
 - [x] Make fully responsive
 - [x] Test dark/light mode
-- [ ] **📍 Git Commit**: `git commit -m "feat: add FeatureCards component"`
+- [x] **📍 Git Commit**: `git commit -m "feat: add FeatureCards component"`
 
 **Backtrack Point**: If cards need redesign, revert and rebuild
 
 ---
 
-### 1.4 CulturalNote Component (Optional)
+<!-- ### 1.4 CulturalNote Component (Optional)
 **File**: `packages/nextjs/components/layout/CulturalNote.tsx`
 
 **Checklist**:
@@ -113,7 +113,7 @@ Build **Home Page**, **Create Wampum Page**, and **Share Wampum Page** with all 
 - [ ] Test dark/light mode
 - [ ] **📍 Git Commit**: `git commit -m "feat: add CulturalNote component"`
 
-**Backtrack Point**: If cultural note needs adjustment, revert and modify
+**Backtrack Point**: If cultural note needs adjustment, revert and modify -->
 
 ---
 

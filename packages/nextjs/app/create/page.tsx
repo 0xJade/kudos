@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { CeremonyButton } from "~~/components/wampum";
+import { CeremonyButton, WampumBeadDisplay } from "~~/components/wampum";
 
 /**
  * Create Wampum Page - Placeholder
@@ -31,6 +31,10 @@ export default function CreateWampumPage() {
           Share a story of gratitude and create a digital Wampum bead that can be shared with others. Your story will be
           preserved on the blockchain, and gratitude will spread through the community.
         </p>
+      </div>
+
+      <div className="flex justify-center mb-8">
+        <WampumBeadDisplay tokenId={1} visualSymbol="#D4A574" size={50} className="mb-8" animated={true} />
       </div>
 
       {/* Placeholder Content */}
