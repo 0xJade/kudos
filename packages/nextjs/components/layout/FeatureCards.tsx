@@ -12,13 +12,13 @@ const features: FeatureCard[] = [
   {
     title: "Weave Your Story",
     description:
-      "Create Wampum with meaningful narratives that honor relationships and express gratitude. Each bead carries a story that connects people across time and space.",
+      "Create Wampum with meaningful narratives that honor relationships and express gratitude. Each Wampum carries a story that connects people across time and space.",
     icon: <DocumentTextIcon className="h-8 w-8" />,
   },
   {
     title: "Share the Gift",
     description:
-      "Propagate gratitude to others. When you share, you keep your bead while creating new ones for recipients. Gratitude multiplies, ownership remains.",
+      "Propagate gratitude to others. When you share, you keep your Wampum while creating new ones for recipients. Gratitude multiplies, ownership remains.",
     icon: <GiftIcon className="h-8 w-8" />,
   },
   {

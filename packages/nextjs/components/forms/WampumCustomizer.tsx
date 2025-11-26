@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { WampumBeadDisplay } from "~~/components/wampum";
 
-interface BeadCustomizerProps {
+interface WampumCustomizerProps {
   value?: string; // Color hex or pattern identifier
   onChange?: (value: string) => void;
   className?: string;
@@ -22,12 +22,12 @@ const WAMPUM_COLORS = [
 ] as const;
 
 /**
- * BeadCustomizer - Component for customizing Wampum bead appearance
+ * WampumCustomizer - Component for customizing Wampum appearance
  *
  * Allows users to select colors from the Wampum palette and optionally
- * choose patterns. Shows a live preview of the selected bead.
+ * choose patterns. Shows a live preview of the selected Wampum.
  */
-export const BeadCustomizer: React.FC<BeadCustomizerProps> = ({ value, onChange, className = "" }) => {
+export const WampumCustomizer: React.FC<WampumCustomizerProps> = ({ value, onChange, className = "" }) => {
   const [selectedColor, setSelectedColor] = useState<string>(value || WAMPUM_COLORS[0].hex);
   const [showCustomColor, setShowCustomColor] = useState(false);
   const [customColorInput, setCustomColorInput] = useState<string>("");
@@ -67,9 +67,9 @@ export const BeadCustomizer: React.FC<BeadCustomizerProps> = ({ value, onChange,
     <div className={className}>
       {/* Section Header */}
       <div className="mb-6">
-        <h3 className="text-xl font-semibold mb-2 text-base-content">Choose your bead&apos;s appearance</h3>
+        <h3 className="text-xl font-semibold mb-2 text-base-content">Choose your Wampum&apos;s appearance</h3>
         <p className="text-sm text-base-content/70">
-          Select a color that represents your gratitude. Each bead is unique, like your story.
+          Select a color that represents your gratitude. Each Wampum is unique, like your story.
         </p>
       </div>
 
