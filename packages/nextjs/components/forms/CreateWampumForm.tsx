@@ -7,7 +7,7 @@ import { Controller, FormProvider, useForm } from "react-hook-form";
 import { type TransactionReceipt, decodeEventLog, isAddress } from "viem";
 import { z } from "zod";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
-import { BeadCustomizer, RecipientInput } from "~~/components/forms";
+import { RecipientInput, WampumCustomizer } from "~~/components/forms";
 import { CeremonyButton, WampumBeadDisplay } from "~~/components/wampum";
 import { useDeployedContractInfo, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
@@ -58,13 +58,13 @@ type CreateWampumFormData = z.infer<typeof createWampumSchema>;
 /**
  * CreateWampumForm - Ceremonial form for creating new Wampum
  *
- * A warm, inviting form that guides users through creating a Wampum bead
+ * A warm, inviting form that guides users through creating a Wampum
  * with a story of gratitude. The form has multiple sections with clear
  * visual hierarchy and ceremonial feeling.
  *
  * Features:
  * - Story input with character count
- * - Bead customization with live preview
+ * - Wampum customization with live preview
  * - Recipient management
  * - Collapsible ceremony settings
  * - Real-time validation
@@ -265,19 +265,19 @@ export const CreateWampumForm: React.FC<CreateWampumFormProps> = ({ onSuccess, c
             </div>
           </section>
 
-          {/* Section 2 - The Bead */}
+          {/* Section 2 - The Wampum */}
           <section className="bg-base-100 border border-base-300 rounded-2xl p-6 md:p-8">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold mb-2 text-base-content">Choose your bead&apos;s appearance</h2>
+              <h2 className="text-2xl font-bold mb-2 text-base-content">Choose your Wampum&apos;s appearance</h2>
               <p className="text-sm text-base-content/70">
-                Select a color that represents your gratitude. Each bead is unique, like your story.
+                Select a color that represents your gratitude. Each Wampum is unique, like your story.
               </p>
             </div>
 
             <Controller
               name="visualSymbol"
               control={control}
-              render={({ field: { onChange, value } }) => <BeadCustomizer value={value} onChange={onChange} />}
+              render={({ field: { onChange, value } }) => <WampumCustomizer value={value} onChange={onChange} />}
             />
 
             {/* Live Preview */}

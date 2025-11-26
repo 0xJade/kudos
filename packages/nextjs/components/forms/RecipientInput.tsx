@@ -83,7 +83,7 @@ const RecipientInputInternal: React.FC<RecipientInputProps> = ({ name, maxRecipi
       <div className="mb-6">
         <label className="block text-xl font-semibold mb-2 text-base-content">Who will receive this Wampum?</label>
         <p className="text-sm text-base-content/70">
-          You&apos;ll keep your bead, and they&apos;ll receive a copy. Gratitude spreads, ownership remains.
+          You&apos;ll keep your Wampum, and they&apos;ll receive a copy. Gratitude spreads, ownership remains.
         </p>
         {maxRecipients && (
           <p className="text-xs text-base-content/60 mt-2">

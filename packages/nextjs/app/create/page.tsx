@@ -28,8 +28,8 @@ export default function CreateWampumPage() {
       <div className="w-full max-w-4xl text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-base-content">Weave Your Wampum Story</h1>
         <p className="text-lg text-base-content/70 max-w-2xl mx-auto">
-          Share a story of gratitude and create a digital Wampum bead that can be shared with others. Your story will be
-          preserved on the blockchain, and gratitude will spread through the community.
+          Share a story of gratitude and create a Wampum that can be shared with others. Your story will be preserved on
+          chain, and gratitude will spread through the community.
         </p>
       </div>
 
