@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { WampumBeadDisplay } from "~~/components/wampum";
+import { WampumDisplay } from "~~/components/wampum";
 
 interface WampumCustomizerProps {
   value?: string; // Color hex or pattern identifier
@@ -169,7 +169,7 @@ export const WampumCustomizer: React.FC<WampumCustomizerProps> = ({ value, onCha
         <div>
           <label className="block text-sm font-medium mb-4 text-base-content">Live Preview</label>
           <div className="flex items-center justify-center min-h-[200px] bg-base-200 rounded-2xl p-8 border border-base-300">
-            <WampumBeadDisplay
+            <WampumDisplay
               tokenId={0} // Placeholder tokenId for preview
               visualSymbol={selectedColor}
               size={160}

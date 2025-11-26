@@ -8,7 +8,7 @@ import { type TransactionReceipt, decodeEventLog, isAddress } from "viem";
 import { z } from "zod";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import { RecipientInput, WampumCustomizer } from "~~/components/forms";
-import { CeremonyButton, WampumBeadDisplay } from "~~/components/wampum";
+import { CeremonyButton, WampumDisplay } from "~~/components/wampum";
 import { useDeployedContractInfo, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
 interface CreateWampumFormProps {
@@ -284,7 +284,7 @@ export const CreateWampumForm: React.FC<CreateWampumFormProps> = ({ onSuccess, c
             <div className="mt-8 flex justify-center">
               <div className="text-center">
                 <p className="text-sm font-medium mb-4 text-base-content">Live Preview</p>
-                <WampumBeadDisplay tokenId={0} visualSymbol={visualSymbol || "#5B4B8A"} size={120} animated={false} />
+                <WampumDisplay tokenId={0} visualSymbol={visualSymbol || "#5B4B8A"} size={120} animated={false} />
               </div>
             </div>
           </section>
@@ -422,7 +422,7 @@ export const CreateWampumForm: React.FC<CreateWampumFormProps> = ({ onSuccess, c
               {/* Preview */}
               <div className="flex flex-col items-center">
                 <p className="text-sm font-medium mb-4 text-base-content">Your Wampum</p>
-                <WampumBeadDisplay tokenId={0} visualSymbol={visualSymbol || "#5B4B8A"} size={160} animated={true} />
+                <WampumDisplay tokenId={0} visualSymbol={visualSymbol || "#5B4B8A"} size={160} animated={true} />
               </div>
 
               {/* Summary */}

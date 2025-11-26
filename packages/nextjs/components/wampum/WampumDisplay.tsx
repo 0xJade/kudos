@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 
-interface WampumBeadDisplayProps {
+interface WampumDisplayProps {
   tokenId: number;
   visualSymbol?: string; // Color hex or pattern identifier
   size?: number; // Diameter in pixels, default: 200
@@ -12,13 +12,13 @@ interface WampumBeadDisplayProps {
 }
 
 /**
- * WampumBeadDisplay - Large, beautiful visualization of a single Wampum bead
+ * WampumDisplay - Large, beautiful visualization of a single Wampum
  *
- * Displays a circular bead with shell-like appearance, shine effects,
+ * Displays a circular Wampum with shell-like appearance, shine effects,
  * and optional gentle pulse animation. Fetches visualSymbol from contract
  * if not provided as a prop.
  */
-export const WampumBeadDisplay: React.FC<WampumBeadDisplayProps> = ({
+export const WampumDisplay: React.FC<WampumDisplayProps> = ({
   tokenId,
   visualSymbol,
   size = 200,
@@ -28,7 +28,7 @@ export const WampumBeadDisplay: React.FC<WampumBeadDisplayProps> = ({
   // Add pulse animation keyframes to document if animated
   useEffect(() => {
     if (animated && typeof document !== "undefined") {
-      const styleId = "wampum-bead-pulse-animation";
+      const styleId = "wampum-pulse-animation";
       if (!document.getElementById(styleId)) {
         const style = document.createElement("style");
         style.id = styleId;
@@ -58,7 +58,7 @@ export const WampumBeadDisplay: React.FC<WampumBeadDisplayProps> = ({
   });
 
   // Use provided visualSymbol or fetch from metadata, or default to primary color
-  const beadColor = visualSymbol || metadata?.visualSymbol || "#5B4B8A";
+  const wampumColor = visualSymbol || metadata?.visualSymbol || "#5B4B8A";
 
   // Parse color if it's a hex string
   const getColorValue = (color: string): string => {
@@ -71,7 +71,7 @@ export const WampumBeadDisplay: React.FC<WampumBeadDisplayProps> = ({
     return "#5B4B8A";
   };
 
-  const colorValue = getColorValue(beadColor);
+  const colorValue = getColorValue(wampumColor);
 
   // Convert hex to RGB for gradient calculation
   const hexToRgb = (hex: string): { r: number; g: number; b: number } | null => {
@@ -108,7 +108,7 @@ export const WampumBeadDisplay: React.FC<WampumBeadDisplayProps> = ({
         }}
       />
 
-      {/* Bead container */}
+      {/* Wampum container */}
       <div
         className="relative rounded-full overflow-hidden"
         style={{
