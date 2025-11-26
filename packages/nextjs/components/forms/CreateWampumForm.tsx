@@ -272,14 +272,6 @@ export const CreateWampumForm: React.FC<CreateWampumFormProps> = ({ onSuccess, c
               control={control}
               render={({ field: { onChange, value } }) => <WampumCustomizer value={value} onChange={onChange} />}
             />
-
-            {/* Live Preview */}
-            <div className="mt-8 flex justify-center">
-              <div className="text-center">
-                <p className="text-sm font-medium mb-4 text-base-content">Live Preview</p>
-                <WampumDisplay tokenId={0} visualSymbol={visualSymbol || "#5B4B8A"} size={120} animated={false} />
-              </div>
-            </div>
           </section>
 
           {/* Section 3 - The Recipients */}
