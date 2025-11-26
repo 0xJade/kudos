@@ -66,7 +66,7 @@ export const ShareWampumForm: React.FC<ShareWampumFormProps> = ({ tokenId, onSuc
   const {
     handleSubmit,
     watch,
-    formState: { errors, isValid },
+    formState: { errors },
   } = methods;
 
   const { writeContractAsync, isMining } = useScaffoldWriteContract({
@@ -123,7 +123,6 @@ export const ShareWampumForm: React.FC<ShareWampumFormProps> = ({ tokenId, onSuc
   const currentSupply = metadata ? Number(metadata.currentSupply) : 0;
   const remainingSupply = maxSupply - currentSupply;
   const isMaxSupplyReached = remainingSupply <= 0;
-  const canAddRecipients = remainingSupply > 0 && recipientCount < remainingSupply;
 
   // Check if propagation is enabled
   const canPropagate = metadata?.canPropagate ?? false;
@@ -352,21 +351,6 @@ export const ShareWampumForm: React.FC<ShareWampumFormProps> = ({ tokenId, onSuc
           {!isMaxSupplyReached && (
             <section className="bg-base-100 border border-base-300 rounded-2xl p-6 md:p-8">
               <div className="flex flex-col items-center space-y-4">
-                {/* Debug Info - Remove in production */}
-                {process.env.NODE_ENV === "development" && (
-                  <div className="w-full p-4 bg-base-200 rounded-lg text-xs font-mono text-base-content/60 mb-4">
-                    <div>Debug Info:</div>
-                    <div>isValid: {isValid ? "✓" : "✗"}</div>
-                    <div>isLoading: {isLoading ? "✓" : "✗"}</div>
-                    <div>canAddRecipients: {canAddRecipients ? "✓" : "✗"}</div>
-                    <div>recipientCount: {recipientCount}</div>
-                    <div>hasValidRecipients: {hasValidRecipients ? "✓" : "✗"}</div>
-                    <div>isFormValid: {isFormValid ? "✓" : "✗"}</div>
-                    <div>remainingSupply: {remainingSupply}</div>
-                    <div>recipients: {JSON.stringify(recipients)}</div>
-                  </div>
-                )}
-
                 <CeremonyButton
                   type="submit"
                   variant="primary"

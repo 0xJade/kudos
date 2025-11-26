@@ -267,13 +267,6 @@ export const CreateWampumForm: React.FC<CreateWampumFormProps> = ({ onSuccess, c
 
           {/* Section 2 - The Wampum */}
           <section className="bg-base-100 border border-base-300 rounded-2xl p-6 md:p-8">
-            <div className="mb-6">
-              <h2 className="text-2xl font-bold mb-2 text-base-content">Choose your Wampum&apos;s appearance</h2>
-              <p className="text-sm text-base-content/70">
-                Select a color that represents your gratitude. Each Wampum is unique, like your story.
-              </p>
-            </div>
-
             <Controller
               name="visualSymbol"
               control={control}
