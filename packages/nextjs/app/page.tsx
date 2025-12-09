@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           <div className="flex justify-center mt-8">
             <Link href="/create">
               <CeremonyButton variant="primary" size="lg">
-                Create Your First Wampum
+                Create a Wampum
               </CeremonyButton>
             </Link>
           </div>

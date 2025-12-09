@@ -1,7 +1,8 @@
 "use client";
 
+import React from "react";
 import { AddressInput } from "@scaffold-ui/components";
-import { Controller, FormProvider, useFieldArray, useForm, useFormContext } from "react-hook-form";
+import { Controller, useFieldArray, useFormContext } from "react-hook-form";
 import { isAddress } from "viem";
 import { PlusIcon, TrashIcon } from "@heroicons/react/24/outline";
 
@@ -127,7 +128,15 @@ const RecipientInputInternal: React.FC<RecipientInputProps> = ({ name, maxRecipi
                           placeholder="0x... or ENS name"
                           value={value || ""}
                           onChange={address => {
-                            onChange(address);
+                            // Ensure we're storing a string, not an Address type
+                            const addressString = typeof address === "string" ? address : String(address || "");
+                            console.log(
+                              "[RecipientInput] Address changed:",
+                              addressString,
+                              "isAddress:",
+                              isAddress(addressString),
+                            );
+                            onChange(addressString);
                           }}
                         />
                       )}
@@ -184,22 +193,12 @@ const RecipientInputInternal: React.FC<RecipientInputProps> = ({ name, maxRecipi
   );
 };
 
-// Wrapper component that handles both form context and standalone modes
-// This wrapper always provides a form context, either from parent or created internally
+// Main export - always uses parent context (assumes it exists)
+// This is the correct behavior when used inside ShareWampumForm or CreateWampumForm
+// Since ShareWampumForm and CreateWampumForm always provide FormProvider,
+// we can directly use RecipientInputInternal without a wrapper
+// RecipientInputInternal uses useFormContext() which will get the parent FormProvider
 export const RecipientInput: React.FC<RecipientInputProps> = props => {
-  // Always create a form for standalone use
-  // If used inside a FormProvider, the internal component will use that instead
-  const standaloneForm = useForm({
-    defaultValues: {
-      [props.name]: [],
-    },
-  });
-
-  // Wrap in FormProvider - if parent FormProvider exists, this will be ignored
-  // The internal component will use the nearest FormProvider (parent if exists, this one if not)
-  return (
-    <FormProvider {...standaloneForm}>
-      <RecipientInputInternal {...props} />
-    </FormProvider>
-  );
+  // Always use parent context - ShareWampumForm and CreateWampumForm provide FormProvider
+  return <RecipientInputInternal {...props} />;
 };

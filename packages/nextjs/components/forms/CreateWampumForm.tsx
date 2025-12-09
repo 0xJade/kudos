@@ -8,7 +8,7 @@ import { type TransactionReceipt, decodeEventLog, isAddress } from "viem";
 import { z } from "zod";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import { RecipientInput, WampumCustomizer } from "~~/components/forms";
-import { CeremonyButton, WampumBeadDisplay } from "~~/components/wampum";
+import { CeremonyButton, WampumDisplay } from "~~/components/wampum";
 import { useDeployedContractInfo, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
 interface CreateWampumFormProps {
@@ -267,26 +267,11 @@ export const CreateWampumForm: React.FC<CreateWampumFormProps> = ({ onSuccess, c
 
           {/* Section 2 - The Wampum */}
           <section className="bg-base-100 border border-base-300 rounded-2xl p-6 md:p-8">
-            <div className="mb-6">
-              <h2 className="text-2xl font-bold mb-2 text-base-content">Choose your Wampum&apos;s appearance</h2>
-              <p className="text-sm text-base-content/70">
-                Select a color that represents your gratitude. Each Wampum is unique, like your story.
-              </p>
-            </div>
-
             <Controller
               name="visualSymbol"
               control={control}
               render={({ field: { onChange, value } }) => <WampumCustomizer value={value} onChange={onChange} />}
             />
-
-            {/* Live Preview */}
-            <div className="mt-8 flex justify-center">
-              <div className="text-center">
-                <p className="text-sm font-medium mb-4 text-base-content">Live Preview</p>
-                <WampumBeadDisplay tokenId={0} visualSymbol={visualSymbol || "#5B4B8A"} size={120} animated={false} />
-              </div>
-            </div>
           </section>
 
           {/* Section 3 - The Recipients */}
@@ -422,7 +407,7 @@ export const CreateWampumForm: React.FC<CreateWampumFormProps> = ({ onSuccess, c
               {/* Preview */}
               <div className="flex flex-col items-center">
                 <p className="text-sm font-medium mb-4 text-base-content">Your Wampum</p>
-                <WampumBeadDisplay tokenId={0} visualSymbol={visualSymbol || "#5B4B8A"} size={160} animated={true} />
+                <WampumDisplay tokenId={0} visualSymbol={visualSymbol || "#5B4B8A"} size={160} animated={true} />
               </div>
 
               {/* Summary */}

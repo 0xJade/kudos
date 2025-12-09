@@ -228,54 +228,54 @@ Build **Home Page**, **Create Wampum Page**, and **Share Wampum Page** with all 
 **File**: `packages/nextjs/components/forms/CreateWampumForm.tsx`
 
 **Checklist**:
-- [ ] Install Zod: `yarn add zod @hookform/resolvers`
-- [ ] Create component file
-- [ ] Add "use client" directive
-- [ ] Set up React Hook Form
-- [ ] Create Zod validation schema:
-  - [ ] Story: required, min 10, max 2000 chars
-  - [ ] Max Supply: required, min 1, max 100
-  - [ ] Initial Recipients: array of valid addresses, max length = maxSupply
-  - [ ] Visual Symbol: optional string
-  - [ ] Media URI: optional, valid URL if provided
-  - [ ] Can Propagate: boolean (default: true)
-  - [ ] Transferable: boolean (default: false)
-- [ ] **Section 1 - The Story**:
-  - [ ] Large textarea with comfortable styling
-  - [ ] **Copy**: Label "What story of gratitude do you want to share?"
-  - [ ] **Copy**: Placeholder "Share the story behind your gratitude..."
-  - [ ] Character count display with gentle encouragement
-- [ ] **Section 2 - The Bead**:
-  - [ ] **Copy**: "Choose your bead's appearance"
-  - [ ] Integrate BeadCustomizer component
-  - [ ] Add live preview using WampumBeadDisplay
-- [ ] **Section 3 - The Recipients**:
-  - [ ] **Copy**: "Who will receive this Wampum?"
-  - [ ] Integrate RecipientInput component
-  - [ ] **Copy**: Helper text "You'll keep your bead, and they'll receive a copy"
-- [ ] **Section 4 - The Ceremony** (collapsible):
-  - [ ] **Copy**: "How should this Wampum be shared?"
-  - [ ] Allow propagation toggle (default: true)
-  - [ ] **Copy**: Explanation "Allow others to share this Wampum with more people"
-  - [ ] Max supply slider (default: 10, max: 100)
-  - [ ] **Copy**: Label "Maximum number of copies"
-  - [ ] Media URI input (optional)
-  - [ ] **Copy**: Label "Media URI (optional)" with helper "Link to image, artwork, or ceremony photo"
-- [ ] **Section 5 - Review & Create**:
-  - [ ] Preview of Wampum bead
-  - [ ] Summary of settings
-  - [ ] **Copy**: Button text "Create Wampum"
-- [ ] Integrate useScaffoldWriteContract for contract interaction
-- [ ] Add gas estimate display
-- [ ] Add real-time validation
-- [ ] Add loading states during transaction
-- [ ] Add success modal with celebration
-- [ ] Use CeremonyButton for submit
-- [ ] Handle form submission (call createKudos function)
-- [ ] Make fully responsive
-- [ ] Test dark/light mode
+- [x] Install Zod: `yarn add zod @hookform/resolvers`
+- [x] Create component file
+- [x] Add "use client" directive
+- [x] Set up React Hook Form
+- [x] Create Zod validation schema:
+  - [x] Story: required, min 10, max 2000 chars
+  - [x] Max Supply: required, min 1, max 100
+  - [x] Initial Recipients: array of valid addresses, max length = maxSupply
+  - [x] Visual Symbol: optional string
+  - [x] Media URI: optional, valid URL if provided
+  - [x] Can Propagate: boolean (default: true)
+  - [x] Transferable: boolean (default: false)
+- [x] **Section 1 - The Story**:
+  - [x] Large textarea with comfortable styling
+  - [x] **Copy**: Label "What story of gratitude do you want to share?"
+  - [x] **Copy**: Placeholder "Share the story behind your gratitude..."
+  - [x] Character count display with gentle encouragement
+- [x] **Section 2 - The Bead**:
+  - [x] **Copy**: "Choose your bead's appearance"
+  - [x] Integrate BeadCustomizer component
+  - [x] Add live preview using WampumBeadDisplay
+- [x] **Section 3 - The Recipients**:
+  - [x] **Copy**: "Who will receive this Wampum?"
+  - [x] Integrate RecipientInput component
+  - [x] **Copy**: Helper text "You'll keep your bead, and they'll receive a copy"
+- [x] **Section 4 - The Ceremony** (collapsible):
+  - [x] **Copy**: "How should this Wampum be shared?"
+  - [x] Allow propagation toggle (default: true)
+  - [x] **Copy**: Explanation "Allow others to share this Wampum with more people"
+  - [x] Max supply slider (default: 10, max: 100)
+  - [x] **Copy**: Label "Maximum number of copies"
+  - [x] Media URI input (optional)
+  - [x] **Copy**: Label "Media URI (optional)" with helper "Link to image, artwork, or ceremony photo"
+- [x] **Section 5 - Review & Create**:
+  - [x] Preview of Wampum bead
+  - [x] Summary of settings
+  - [x] **Copy**: Button text "Create Wampum"
+- [x] Integrate useScaffoldWriteContract for contract interaction
+- [x] Add gas estimate display
+- [x] Add real-time validation
+- [x] Add loading states during transaction
+- [x] Add success modal with celebration
+- [x] Use CeremonyButton for submit
+- [x] Handle form submission (call createKudos function)
+- [x] Make fully responsive
+- [x] Test dark/light mode
 - [ ] Test all validation rules
-- [ ] **📍 Git Commit**: `git commit -m "feat: add CreateWampumForm component"`
+- [x] **📍 Git Commit**: `git commit -m "feat: add CreateWampumForm component"`
 
 **Backtrack Point**: If form has issues, revert and fix section by section
 
@@ -443,10 +443,10 @@ Build **Home Page**, **Create Wampum Page**, and **Share Wampum Page** with all 
 ---
 
 ### 5.3 Share/Propagate Wampum Page
-**File**: `packages/nextjs/app/wampum/[tokenId]/propagate/page.tsx`
+**File**: `packages/nextjs/app/wampum/[tokenId]/share/page.tsx`
 
 **Checklist**:
-- [ ] Create directory structure: `app/wampum/[tokenId]/propagate/`
+- [ ] Create directory structure: `app/wampum/[tokenId]/share/`
 - [ ] Create page file
 - [ ] Import ShareWampumForm component
 - [ ] Import useParams from next/navigation
